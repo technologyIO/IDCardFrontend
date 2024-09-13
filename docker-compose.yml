@@ -1,9 +1,7 @@
-version: '2'
 services:
   backend:
-    build: 
-    context: .
-    dockerfile: git@github.com:MR-Shivam-Tiwari/IDCARDGENRATOR.git
+    build:
+      context: .
     image: frontend
     ports:
       - '8080:80'
