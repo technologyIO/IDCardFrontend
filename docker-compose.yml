@@ -1,0 +1,14 @@
+version: '2'
+services:
+  backend:
+    build: 
+    context: .
+    dockerfile: git@github.com:MR-Shivam-Tiwari/IDCARDGENRATOR.git
+    image: frontend
+    ports:
+      - '8080:80'
+    restart: always
+    network_mode: host
+    environment:
+      - NODE_EN=preprod
+      - PORT=8080

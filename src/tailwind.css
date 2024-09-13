@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+
+/* src/App.css */
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1200/600;
+  object-fit: cover;
+}
+
+
+
+/* Customize scrollbar */
+::-webkit-scrollbar {
+  width: 6px;  /* Vertical scrollbar width */
+  height: 12px; /* Horizontal scrollbar height */
+  border-radius: 0px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle on hover */
+}
+
+/* Horizontal scrollbar */
+::-webkit-scrollbar-thumb:horizontal {
+  height: 6px; /* Set the height of the horizontal scrollbar handle */
+}
+
+/* Horizontal scrollbar on hover */
+::-webkit-scrollbar-thumb:hover:horizontal {
+  background: #555; /* Color of the horizontal scrollbar handle on hover */
+}
+
+
+
+.loader {
+  color: blue;
+  font-size: 20px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 
+    2em -2em 0 0em, 3em 0 0 -1em, 
+    2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+    3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 
+    2em -2em 0 0, 3em 0 0 0.2em, 
+    2em 2em 0 0, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+     -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+     -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+     -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+    3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+    3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+  
+
+  
+  /* index.css */
+
+.martel-extralight {
+    font-family: "Martel", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .martel-light {
+    font-family: "Martel", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .martel-regular {
+    font-family: "Martel", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .martel-semibold {
+    font-family: "Martel", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  /* index.css */
+
+.josefin-sans-light {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+.josefin-sans-regular {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+.josefin-sans-semibold {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600; /* Semi-bold */
+  font-style: normal;
+}
+
+.josefin-sans-bold {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+
+  
+  .martel-bold {
+    font-family: "Martel", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .martel-extrabold {
+    font-family: "Martel", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .martel-black {
+    font-family: "Martel", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .yatra-one-regular {
+    font-family: "Yatra One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .martel-sans-extralight {
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .martel-sans-light {
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .martel-sans-regular {
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .martel-sans-semibold {
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .martel-sans-bold {
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .martel-sans-extrabold {
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .martel-sans-black {
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .annapurna-sil-regular {
+    font-family: "Annapurna SIL", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .annapurna-sil-bold {
+    font-family: "Annapurna SIL", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  
