@@ -75,7 +75,7 @@ function ArchiveEvent() {
         </div>
       </header>
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-4">Events</h1>
+        <h1 className="text-3xl font-bold mb-4">Archive Events</h1>
 
         {loading ? (
           <div className="flex justify-center items-center h-[60vh]">
