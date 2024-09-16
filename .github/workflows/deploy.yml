@@ -13,6 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Create SSH directory
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
       - name: Disable SSH Host Key Checking
         run: echo "StrictHostKeyChecking no" >> ~/.ssh/config
 
