@@ -13,6 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Disable SSH Host Key Checking
+        run: echo "StrictHostKeyChecking no" >> ~/.ssh/config
+
+      - name: Add EC2 Host to Known Hosts
+        run: ssh-keyscan -H ${{ secrets.AWS_EC2_IP_ADDRESS }} >> ~/.ssh/known_hosts
+
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
