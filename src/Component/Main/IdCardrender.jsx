@@ -870,8 +870,7 @@ const IdCard = ({
                 className="absolute bottom-[130px] left-0 right-0 w-full whitespace-nowrap text-lg font-semibold text-center text-white mt-1"
               >
                 {card.institute
-                  .toLowerCase()
-                  .replace(/\b\w/g, (char) => char.toUpperCase())}
+                  .toUpperCase()}
               </p>
             )}
             {globalVisibility.designation && card.designation && (
