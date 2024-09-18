@@ -868,10 +868,8 @@ const IdCard = ({
                   color: styles.institute.color,
                 }}
                 className="absolute bottom-[130px] left-0 right-0 w-full text-lg font-semibold text-center text-white mt-1 w-[430px] px-10"
-              >
-                {card.institute
-                  .toUpperCase()}
-              </p>
+                dangerouslySetInnerHTML={{ __html: card.institute.toUpperCase() }}
+              ></p>
             )}
             {globalVisibility.designation && card.designation && (
               <p
